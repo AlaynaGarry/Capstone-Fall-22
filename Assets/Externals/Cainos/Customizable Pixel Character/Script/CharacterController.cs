@@ -41,6 +41,7 @@ namespace Cainos
         public float fallGravityMutiplier = 1.3f;               // gravity multiplier when character is falling, should be equal or greater than 1.0
 
         public float groundCheckRadius = 0.30f;                 // radius of the circle at the character's bottom to determine whether the character is on ground
+        //public bool isGrounded;
 
         [ExposeProperty]                                        // is the character dead? if dead, plays dead animation and disable control
         public bool IsDead
@@ -192,10 +193,11 @@ namespace Cainos
                 {
                     curVel.x = Mathf.MoveTowards(curVel.x, 0.0f, brakeAcc * Time.fixedDeltaTime);
                 }
-
+                Debug.Log(jumpTimer);
                 //JUMP
                 if (isGrounded && inputJump && jumpTimer >= jumpCooldown)
                 {
+                    //Debug.Log(jumpCooldown.ToString());
                     isGrounded = false;
                     jumpTimer = 0.0f;
                     curVel.y += jumpSpeed;

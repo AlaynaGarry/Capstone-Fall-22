@@ -20,14 +20,6 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    void Update() {
-        /*if(dialogueAnimator && Input.GetKeyDown("space"))
-        {
-            Debug.Log("Space");
-            DisplayNextSentence();
-        } */  
-    }
-
     public void StartDialogue(Dialogue dialogue)
     {
         dialogueAnimator.SetBool("IsOpen", true);
