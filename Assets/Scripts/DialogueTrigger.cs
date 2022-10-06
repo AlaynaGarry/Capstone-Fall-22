@@ -6,10 +6,19 @@ using Unity.VisualScripting;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue dialogue;
-    public TextMeshProUGUI interactUITxt;
-    public GameObject interactUI;
+    [Header("UI")]
+    [SerializeField] public Dialogue dialogue;
+    [SerializeField] public TextMeshProUGUI interactUITxt;
+    [SerializeField] public GameObject interactUI;
 
+    [Header("Animator")]
+    public Animator interactionAnimator;
+
+    [HideInInspector]
+    [Header("Key Code Controls")]
+    public KeyCode interactKey = KeyCode.E;
+
+    [Header("Trigger Bools")]
     bool isPlayerCloseEnough = false;
 
     private void Start()
@@ -19,7 +28,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E) && interactUI)
+        if (isPlayerCloseEnough && Input.GetKeyDown(interactKey) && interactUI)
         {
             TriggerDialogue();
         }
@@ -27,19 +36,28 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        interactUITxt.text = "";
-        interactUI.SetActive(false);
+        DeactivateInteractableTxt();
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         
+    }
+
+    public void ActivateInteractableTxt()
+    {
+        interactUI.SetActive(true);
+        interactionAnimator.SetTrigger("Start");
+        interactUITxt.text = interactKey.ToString();
+    }
+    public void DeactivateInteractableTxt()
+    {
+        interactUI.SetActive(false);
+        interactUITxt.text = "";
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            //Debug.Log("Player");
-            interactUI.SetActive(true);
-            interactUITxt.text = "E";
+            ActivateInteractableTxt();
             isPlayerCloseEnough = true;
         }
     }
@@ -48,9 +66,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //Debug.Log("Player leave");
-            interactUI.SetActive(false);
-            interactUITxt.text = "";
+            DeactivateInteractableTxt();
             isPlayerCloseEnough = false;
         }
     }

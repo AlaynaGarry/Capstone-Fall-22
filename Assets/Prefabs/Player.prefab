@@ -172,13 +172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b661dd84b811c4e87037248ae12a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMovement: 1
+  defaultMovement: 0
   leftKey: 97
   rightKey: 100
   crouchKey: 115
   jumpKey: 32
   moveModifierKey: 304
-  attackKey: 0
+  attackKey: 323
   walkSpeedMax: 2.5
   walkAcc: 10
   runSpeedMax: 5
@@ -189,11 +189,11 @@ MonoBehaviour:
   airAcc: 8
   groundBrakeAcc: 6
   airBrakeAcc: 1
-  jumpSpeed: 6
+  jumpSpeed: 5
   jumpCooldown: 0.55
   jumpGravityMutiplier: 0.6
   fallGravityMutiplier: 1.3
-  groundCheckRadius: 0.17
+  groundCheckRadius: 0.3
 --- !u!70 &2824024058581086464
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -207,8 +207,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005250931, y: 0.96441746}
-  m_Size: {x: 0.48949814, y: 1.8782682}
+  m_Offset: {x: 0.005250931, y: 0.94927526}
+  m_Size: {x: 0.48949814, y: 1.9085526}
   m_Direction: 0
 --- !u!50 &5082379836295970583
 Rigidbody2D:
@@ -328,7 +328,7 @@ ParentConstraint:
   m_TranslationAtRest: {x: -0.033670418, y: 0.68618727, z: -0.17015727}
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 0, y: -0.03000021, z: 0}
+  - {x: 0, y: -0.029999971, z: 0}
   m_RotationOffsets:
   - {x: 0, y: 0, z: 179.99992}
   m_AffectTranslationX: 1

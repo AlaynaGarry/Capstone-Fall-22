@@ -2,22 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+/// <summary>
+/// Base code from Brackey's Dialogue System Youtube Video. 
+/// Link: https://www.youtube.com/watch?v=_nRzoTzeyxU&t=753s
+/// Edits for functionallity and preference by yours truly Alayna Garry
+/// </summary>
 public class DialogueManager : MonoBehaviour
 {
+    [Header("UI")]
     public TMP_Text nameText;
     public TMP_Text dialogueText;
-
+    [Header("Anim")]
     public Animator dialogueAnimator;
+    [Header("Player")]
     public GameObject player;
 
+    [HideInInspector]
+    [Header("Key Code Controls")]
+    public KeyCode continueKey = KeyCode.Space;
 
+    [Header("Dialogue")]
     private Queue<string> sentences;
 
     // Use this for initialization
     void Start()
     {
         sentences = new Queue<string>();
+    }
+
+    void Update()
+    {
+        if (dialogueAnimator)
+        {
+            if (Input.GetKeyDown(continueKey))
+            {
+                DisplayNextSentence();
+            }
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
