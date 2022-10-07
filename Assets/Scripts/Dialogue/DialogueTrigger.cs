@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 public class DialogueTrigger : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] public Dialogue dialogue;
+    [SerializeField] public Response dialogue;
     [SerializeField] public TextMeshProUGUI interactUITxt;
     [SerializeField] public GameObject interactUI;
 
@@ -38,7 +38,6 @@ public class DialogueTrigger : MonoBehaviour
     {
         DeactivateInteractableTxt();
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        
     }
 
     public void ActivateInteractableTxt()

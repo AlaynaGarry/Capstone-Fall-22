@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 /// <summary>
-/// Base code from Brackey's Dialogue System Youtube Video. 
+/// Base code from Brackey's Response System Youtube Video. 
 /// Link: https://www.youtube.com/watch?v=_nRzoTzeyxU&t=753s
 /// Edits for functionallity and preference by yours truly Alayna Garry
 /// </summary>
@@ -21,8 +21,11 @@ public class DialogueManager : MonoBehaviour
     [Header("Key Code Controls")]
     public KeyCode continueKey = KeyCode.Space;
 
-    [Header("Dialogue")]
+    [Header("Response")]
     private Queue<string> sentences;
+
+    [Header("Timer")]
+    float returnControlTimer;
 
     // Use this for initialization
     void Start()
@@ -41,15 +44,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Response dialogue)
     {
         dialogueAnimator.SetBool("IsOpen", true);
+
         Cainos.CharacterController.controlsEnabled = false;
-        nameText.text = dialogue.name;
+
+        nameText.text = dialogue.characterName;
 
         sentences.Clear();
 
-        foreach (string sentence in dialogue.sentences)
+        foreach (string sentence in dialogue.responces)
         {
             sentences.Enqueue(sentence);
         }
@@ -82,7 +87,28 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+       /* returnControlTimer = 0f;
+        Debug.Log("Start: " + returnControlTimer);
+
+        *//*if (returnControlTimer <= 3f)
+        {
+            returnControlTimer += Time.deltaTime;
+        }
+        else
+        {
+            Cainos.CharacterController.controlsEnabled = true;
+        }*//*
+
+        do
+        {
+            returnControlTimer += Time.deltaTime;
+            Debug.Log("Update: " + returnControlTimer);
+        }while(returnControlTimer >= 5.0f);
+
+        Debug.Log("Final: " + returnControlTimer);*/
+
         Cainos.CharacterController.controlsEnabled = true;
+
         dialogueAnimator.SetBool("IsOpen", false);
     }
 }

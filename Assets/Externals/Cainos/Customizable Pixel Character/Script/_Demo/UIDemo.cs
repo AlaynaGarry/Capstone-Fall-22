@@ -214,7 +214,7 @@ namespace Cainos.CustomizablePixelCharacter
             dropdownPreset.value = presets.IndexOf(startPreset);
         }
 
-        //Get the last section from material or gameobject name
+        //Get the last section from material or gameobject characterName
         private string GetName( string rawName )
         {
             string[] s = rawName.Split('-');

@@ -36,7 +36,7 @@ namespace Cainos
         public float airBrakeAcc = 1.0f;                        // braking acceleration (from movement to still) while in air
 
         public float jumpSpeed = 5.0f;                          // speed applied to character when jump
-        public float jumpCooldown = 0.55f;                      // time to be able to jump again after landing
+        public float jumpCooldown = 0.5f;                      // time to be able to jump again after landing
         public float jumpGravityMutiplier = 0.6f;               // gravity multiplier when character is jumping, should be within [0.0,1.0], set it to lower value so that the longer you press the jump button, the higher the character can jump    
         public float fallGravityMutiplier = 1.3f;               // gravity multiplier when character is falling, should be equal or greater than 1.0
 
@@ -91,8 +91,8 @@ namespace Cainos
             bool inputAttack = false;
             bool inputAttackContinuous = false;
 
-            bool pointerOverUI = EventSystem.current && EventSystem.current.IsPointerOverGameObject();
-            if (!pointerOverUI)
+            //bool pointerOverUI = EventSystem.current && EventSystem.current.IsPointerOverGameObject();
+            //if (!pointerOverUI)
             {
                 inputCrounch = Input.GetKey(crouchKey);
                 inputMoveModifier = Input.GetKey(moveModifierKey);
@@ -193,7 +193,7 @@ namespace Cainos
                 {
                     curVel.x = Mathf.MoveTowards(curVel.x, 0.0f, brakeAcc * Time.fixedDeltaTime);
                 }
-                Debug.Log(jumpTimer);
+                //Debug.Log(jumpTimer);
                 //JUMP
                 if (isGrounded && inputJump && jumpTimer >= jumpCooldown)
                 {

@@ -1990,7 +1990,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -4, z: -10}
+  m_LocalPosition: {x: 4, y: -3.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9100,7 +9100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2869986716967923464, guid: 5b7018241841ae54795182843a24176d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 2869986716967923464, guid: 5b7018241841ae54795182843a24176d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9137,6 +9137,14 @@ PrefabInstance:
     - target: {fileID: 2869986716967923467, guid: 5b7018241841ae54795182843a24176d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3297107939035407520, guid: 5b7018241841ae54795182843a24176d, type: 3}
+      propertyPath: jumpCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267811842949524540, guid: 5b7018241841ae54795182843a24176d, type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].y
+      value: -0.029999971
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b7018241841ae54795182843a24176d, type: 3}
@@ -9226,6 +9234,22 @@ PrefabInstance:
       propertyPath: interactionAnimator
       value: 
       objectReference: {fileID: 974938603}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.characterName
+      value: Marvin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.responces.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.responces.Array.data[0]
+      value: Howdy!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.responces.Array.data[1]
+      value: You still here?
+      objectReference: {fileID: 0}
     - target: {fileID: 2140482675490283908, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9293,7 +9317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8129469846268238850, guid: 1b26b43cea683754ea63c1a34a919f87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 8129469846268238850, guid: 1b26b43cea683754ea63c1a34a919f87, type: 3}
       propertyPath: m_LocalPosition.z
