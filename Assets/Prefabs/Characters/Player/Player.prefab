@@ -190,7 +190,7 @@ MonoBehaviour:
   groundBrakeAcc: 6
   airBrakeAcc: 1
   jumpSpeed: 5
-  jumpCooldown: 0.55
+  jumpCooldown: 0.5
   jumpGravityMutiplier: 0.6
   fallGravityMutiplier: 1.3
   groundCheckRadius: 0.3
