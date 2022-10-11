@@ -4647,6 +4647,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &1230251577 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6460375886545198111, guid: 5b7018241841ae54795182843a24176d, type: 3}
+  m_PrefabInstance: {fileID: 2869986717502649158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1255442770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2719227801452879243, guid: 0a84f54077193d3489d0de133048df37, type: 3}
@@ -7125,6 +7130,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1023973193}
   dialogueAnimator: {fileID: 814603898}
   player: {fileID: 1546294774002245737}
+  playerAnimator: {fileID: 1230251577}
   continueKey: 32
 --- !u!4 &2009381489
 Transform:
@@ -9097,19 +9103,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2529266391965369714, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2529266391965369714, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2529266391965369714, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 2529266391965369714, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 3378129808499424540, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
       propertyPath: m_Pivot.x
@@ -9198,6 +9204,10 @@ PrefabInstance:
     - target: {fileID: 3378129808499424541, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
       propertyPath: m_Name
       value: Dialogue Choices Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378129808499424541, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3378129809052355562, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -9493,6 +9503,10 @@ PrefabInstance:
     - target: {fileID: 8153006014882343078, guid: 39f714fb84faf6d43a35bf5a63f17e5c, type: 3}
       propertyPath: m_Name
       value: Dialogue Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 8153006014882343078, guid: 39f714fb84faf6d43a35bf5a63f17e5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8153006014882343079, guid: 39f714fb84faf6d43a35bf5a63f17e5c, type: 3}
       propertyPath: m_Pivot.x

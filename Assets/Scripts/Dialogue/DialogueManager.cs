@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     public Animator dialogueAnimator;
     [Header("Player")]
     public GameObject player;
+    public Animator playerAnimator;
 
     [HideInInspector]
     [Header("Key Code Controls")]
@@ -23,9 +24,6 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Response")]
     private Queue<string> sentences;
-
-    [Header("Timer")]
-    float returnControlTimer;
 
     // Use this for initialization
     void Start()
@@ -47,6 +45,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Response dialogue)
     {
         dialogueAnimator.SetBool("IsOpen", true);
+        playerAnimator.SetFloat("MovingBlend", 0);
 
         Cainos.CharacterController.controlsEnabled = false;
 
@@ -66,7 +65,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
-            EndDialogue();
+            StartCoroutine(EndDialogue());
             return;
         }
 
@@ -85,30 +84,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
+    IEnumerator EndDialogue()
     {
-       /* returnControlTimer = 0f;
-        Debug.Log("Start: " + returnControlTimer);
-
-        *//*if (returnControlTimer <= 3f)
-        {
-            returnControlTimer += Time.deltaTime;
-        }
-        else
-        {
-            Cainos.CharacterController.controlsEnabled = true;
-        }*//*
-
-        do
-        {
-            returnControlTimer += Time.deltaTime;
-            Debug.Log("Update: " + returnControlTimer);
-        }while(returnControlTimer >= 5.0f);
-
-        Debug.Log("Final: " + returnControlTimer);*/
-
-        Cainos.CharacterController.controlsEnabled = true;
-
         dialogueAnimator.SetBool("IsOpen", false);
+
+        yield return new WaitForSeconds(0.5f);
+        Cainos.CharacterController.controlsEnabled = true;
     }
 }
