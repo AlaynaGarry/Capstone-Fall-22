@@ -8,9 +8,10 @@ public class DialogueTrigger : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] public Response dialogue;
+    [SerializeField] public Question question;
     [SerializeField] public TextMeshProUGUI interactUITxt;
     [SerializeField] public GameObject interactUI;
-
+     
     [Header("Animator")]
     public Animator interactionAnimator;
 
@@ -28,16 +29,24 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
+        /*if(dialogueManager.active)*/
+
         if (isPlayerCloseEnough && Input.GetKeyDown(interactKey) && interactUI)
         {
             TriggerDialogue();
+        } 
+        //replace with check if DialogueManager dialogue is NOT unning and if player is close enough
+        else if (isPlayerCloseEnough && !interactUI.activeSelf && Cainos.CharacterController.controlsEnabled)
+        {
+            ActivateInteractableTxt();
         }
     }
 
     public void TriggerDialogue()
     {
         DeactivateInteractableTxt();
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        FindObjectOfType<DialogueManager>().StartChoice(question);
     }
 
     public void ActivateInteractableTxt()

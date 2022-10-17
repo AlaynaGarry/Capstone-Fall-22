@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialogue : MonoBehaviour
+[System.Serializable]
+public class Dialogue
 {
     public string Name;
-    public Response[] responses;
+    public string[] sentences;
+
+    //public Response[] responses;
 }
