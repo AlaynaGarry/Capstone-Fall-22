@@ -28,7 +28,8 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Response")]
     private Queue<string> sentences;
-
+    private int responseID = 0;
+   
     /// <summary>
     /// Code here was written by Draven Bowton and modified by yours truly Alayna Garry
     /// </summary>
@@ -62,14 +63,12 @@ public class DialogueManager : MonoBehaviour
     /// END OF CODE
     /// </summary>
 
+    public Enum lineType;
     // Use this for initialization
     void Start()
     {
         sentences = new Queue<string>();
-
-        //GenerateTextButtons(initialDialogue);
-        //questionQueue = new Queue<string>();
-        //InitializeButtons();
+        lineType = Response.LineType.RESPONSE;
     }
 
     void Update()
@@ -83,20 +82,23 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(Response dialogue)
+    public void StartDialogue(Response[] dialogue)
     {
         dialogueAnimator.SetBool("IsOpen", true);
         playerAnimator.SetFloat("MovingBlend", 0);
 
         Cainos.CharacterController.controlsEnabled = false;
 
-        nameText.text = dialogue.characterName;
+        nameText.text = dialogue[0].characterName;
 
         sentences.Clear();
-
-        foreach (string sentence in dialogue.responces)
+        for (int i = 0; i < dialogue.Length; i++)
         {
-            sentences.Enqueue(sentence);
+            foreach (string sentence in dialogue[i].responces)
+            {
+                if(dialogue[i].ID == responseID)
+                    sentences.Enqueue(sentence);
+            }
         }
 
         DisplayNextSentence();
@@ -116,8 +118,11 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             StartCoroutine(EndDialogue());
+            responseID++;
             return;
         }
+
+        //if(sentences.LineType)
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();

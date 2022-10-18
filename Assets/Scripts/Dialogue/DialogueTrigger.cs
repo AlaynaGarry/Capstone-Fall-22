@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using System;
 
 public class DialogueTrigger : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] public Response dialogue;
+    [SerializeField] public Response[] dialogue;
     [SerializeField] public Question question;
     [SerializeField] public TextMeshProUGUI interactUITxt;
     [SerializeField] public GameObject interactUI;
@@ -25,6 +26,7 @@ public class DialogueTrigger : MonoBehaviour
     private void Start()
     {
         interactUI.SetActive(false);
+        
     }
 
     private void Update()
@@ -45,8 +47,8 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         DeactivateInteractableTxt();
-        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        FindObjectOfType<DialogueManager>().StartChoice(question);
+        
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
     public void ActivateInteractableTxt()

@@ -7323,11 +7323,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1392374123}
   dialogueText: {fileID: 1023973193}
+  questionTxt: {fileID: 2529266392951400162}
   dialogueAnimator: {fileID: 814603898}
   player: {fileID: 1546294774002245737}
   playerAnimator: {fileID: 1230251577}
   continueKey: 32
-  questionTxt: {fileID: 2529266392951400162}
   initialDialogue:
     chatName: Ryan
     choices:
@@ -9317,6 +9317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Choices Box
       objectReference: {fileID: 0}
+    - target: {fileID: 3378129808499424541, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 411bcd6b7254f3b41867de63f7b2db15, type: 3}
 --- !u!114 &2529266392951400162 stripped
@@ -9471,7 +9475,11 @@ PrefabInstance:
       objectReference: {fileID: 24736693}
     - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: question.nameText
-      value: Bob
+      value: MarvinQuestion
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: interactionAnimator
@@ -9484,6 +9492,10 @@ PrefabInstance:
     - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: dialogue.characterName
       value: Marvin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.data[1].ID
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: dialogue.responces.Array.size
@@ -9507,15 +9519,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: question.choicesList.Array.data[0]
-      value: yes
+      value: yes QA1
       objectReference: {fileID: 0}
     - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: question.choicesList.Array.data[1]
-      value: no
+      value: no QA2
       objectReference: {fileID: 0}
     - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: question.questionText.Array.data[0]
       value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.data[0].characterName
+      value: Marvin 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.data[1].characterName
+      value: Marvin 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.data[0].responces.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.data[1].responces.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.data[0].responces.Array.data[0]
+      value: Howdy!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.data[0].responces.Array.data[1]
+      value: New around town?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.data[1].responces.Array.data[0]
+      value: Didn't you already say hi?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231777059051068173, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: dialogue.Array.data[1].responces.Array.data[1]
+      value: Why don't you go explore the town?
       objectReference: {fileID: 0}
     - target: {fileID: 2140482675490283908, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: m_RootOrder
@@ -9559,6 +9603,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2140482675490283908, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336382809371942692, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4635548949665226963, guid: 5d8fbe205e2e15145a5e24c77af684fc, type: 3}
@@ -9649,7 +9697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8153006014882343078, guid: 39f714fb84faf6d43a35bf5a63f17e5c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8153006014882343079, guid: 39f714fb84faf6d43a35bf5a63f17e5c, type: 3}
       propertyPath: m_Pivot.x
@@ -9735,6 +9783,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8153006014882343082, guid: 39f714fb84faf6d43a35bf5a63f17e5c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8d2d7c76b218e7948b3209f8dc8b149e, type: 2}
     - target: {fileID: 8153006015438265937, guid: 39f714fb84faf6d43a35bf5a63f17e5c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
