@@ -11,6 +11,10 @@ using System;
 /// </summary>
 public class DialogueManager : MonoBehaviour
 {
+    [Header("Instance")]
+    static DialogueManager dialogueManagerInstance;
+    public static DialogueManager Instance { get { return dialogueManagerInstance; } }
+
     [Header("UI")]
     public TMP_Text nameText;
     public TMP_Text dialogueText;
@@ -29,39 +33,42 @@ public class DialogueManager : MonoBehaviour
     [Header("Response")]
     private Queue<string> sentences;
     private int responseID = 0;
-   
-    /// <summary>
-    /// Code here was written by Draven Bowton and modified by yours truly Alayna Garry
-    /// </summary>
-    [Header("Choice Info")]
-    [SerializeField] TextDialogue initialDialogue;
 
     [Header("Choice UI")]
-    [SerializeField][Tooltip("Built to be a Panel w/ a Layout Group Component")] GameObject buttonContainer;
-    [SerializeField][Tooltip("Requires Button Component On Parent And TMP_Text on Child")] GameObject buttonPrefab;
+    [SerializeField][Tooltip("Built to be a Panel w/ a Layout Group Component")] public GameObject buttonContainer;
+    [SerializeField][Tooltip("Requires Button Component On Parent And TMP_Text on Child")] public GameObject buttonPrefab;
 
-    // Used To Delete TextBoxes After Selection is Made
-    List<GameObject> currentActiveButtons = new List<GameObject>();
+    /*    /// <summary>
+        /// Code here was written by Draven Bowton and modified by yours truly Alayna Garry
+        /// </summary>
+        [Header("Choice Info")]
 
-    [System.Serializable]
-    public struct TextOptions
-    {
-        [Header("Choice Text")]
-        public string text;
-        public int optionId;
-    }
+        [Header("Choice UI")]
+        [SerializeField][Tooltip("Built to be a Panel w/ a Layout Group Component")] GameObject buttonContainer;
+        [SerializeField][Tooltip("Requires Button Component On Parent And TMP_Text on Child")] GameObject buttonPrefab;
 
-    [System.Serializable]
-    public struct TextDialogue
-    {
-        [Header("Character Name")]
-        public string chatName;
-        [Header("All Choices")]
-        public List<TextOptions> choices;
-    }
-    /// <summary>
-    /// END OF CODE
-    /// </summary>
+        // Used To Delete TextBoxes After Selection is Made
+        List<GameObject> currentActiveButtons = new List<GameObject>();
+
+        [System.Serializable]
+        public struct TextOptions
+        {
+            [Header("Choice Text")]
+            public string text;
+            public int optionId;
+        }
+
+        [System.Serializable]
+        public struct TextDialogue
+        {
+            [Header("Character Name")]
+            public string chatName;
+            [Header("All Choices")]
+            public List<TextOptions> choices;
+        }
+        /// <summary>
+        /// END OF CODE
+        /// </summary>*/
 
     public Enum lineType;
     // Use this for initialization
@@ -74,43 +81,45 @@ public class DialogueManager : MonoBehaviour
     void Update()
     {
         if (dialogueAnimator)
-        {
-            if (Input.GetKeyDown(continueKey))
-            {
-                DisplayNextSentence();
-            }
-        }
+         {
+             if (Input.GetKeyDown(continueKey))
+             {
+                 DisplayNextSentence();
+             }
+         }
     }
 
-    public void StartDialogue(Response[] dialogue)
+    public void StartDialogue(Response dialogue)
     {
         dialogueAnimator.SetBool("IsOpen", true);
         playerAnimator.SetFloat("MovingBlend", 0);
 
         Cainos.CharacterController.controlsEnabled = false;
 
-        nameText.text = dialogue[0].characterName;
+        nameText.text = dialogue.characterName;
 
         sentences.Clear();
-        for (int i = 0; i < dialogue.Length; i++)
+        //for (int i = 0; i < dialogue.Length; i++)
+        //{
+        foreach (string sentence in dialogue.responces)
         {
-            foreach (string sentence in dialogue[i].responces)
-            {
-                if(dialogue[i].ID == responseID)
-                    sentences.Enqueue(sentence);
-            }
+            //if(dialogue.ID == responseID)
+            //Debug.Log(sentence);
+            sentences.Enqueue(sentence);
         }
+        //}
 
-        DisplayNextSentence();
+                DisplayNextSentence();
+
+        //DisplayNextSentence(dialogue[responseID]);
     }
 
-    public void StartChoice(Question question)
+    public void StartChoice(Response response)
     {
-        Debug.Log("Starting convo with " + question.nameText);
-        questionTxt.text = question.questionText;
+        questionTxt.text = response.question;
 
         //Line from Draven to activate the buttons
-        GenerateTextButtons(initialDialogue);
+        GenerateTextButtons(response);
     }
 
     public void DisplayNextSentence()
@@ -122,7 +131,11 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        //if(sentences.LineType)
+       /* if (response.lineType == Response.LineType.QUESTION && response.question != "")
+        {
+            questionTxt.text = response.question;
+            GenerateTextButtons(response);
+        }*/
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
@@ -133,18 +146,20 @@ public class DialogueManager : MonoBehaviour
     /// Code here was written by Draven Bowton and modified by yours truly Alayna Garry
     /// </summary>
 
-    public void GenerateTextButtons(TextDialogue textInfo)
+    public void GenerateTextButtons(Response response)
     {
-        RemoveActiveDialogue();
+        RemoveActiveDialogue(response);
+        Response.TextDialogue textInfo = response.initialDialogue;
+
 
         foreach (var info in textInfo.choices)
         {
             GameObject newButton = Instantiate(buttonPrefab, buttonContainer.transform);
-            newButton.name = textInfo.chatName + "Option: " + info.optionId;
+            newButton.name = "Option: " + info.optionId;
             newButton.GetComponentInChildren<TMP_Text>().text = info.text;
             newButton.GetComponent<Button>().onClick.AddListener(() => OptionSelected(info.optionId));
 
-            currentActiveButtons.Add(newButton);
+            response.currentActiveButtons.Add(newButton);
         }
     }
 
@@ -153,12 +168,12 @@ public class DialogueManager : MonoBehaviour
         print(selection);
     }
 
-    public void RemoveActiveDialogue()
+    public void RemoveActiveDialogue(Response response)
     {
-        for (int i = 0; i < currentActiveButtons.Count;)
+        for (int i = 0; i < response.currentActiveButtons.Count;)
         {
-            GameObject go = currentActiveButtons[i];
-            currentActiveButtons.Remove(go);
+            GameObject go = response.currentActiveButtons[i];
+            response.currentActiveButtons.Remove(go);
             Destroy(go);
         }
     }

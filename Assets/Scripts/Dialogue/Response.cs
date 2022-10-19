@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 [System.Serializable]
 public class Response
@@ -25,18 +28,76 @@ public class Response
     public string[] responces;
 
     [Header("Question Class Vars")]
-    public string[] choicesList;
+    public string question;
+    public Answer[] answers;
 
-    /*[Header("Identification")]
-    public int displayOrder;
+    /// <summary>
+    /// Code here was written by Draven Bowton and modified by yours truly Alayna Garry
+    /// </summary>
+    [Header("Choice Info")]
+    [SerializeField] public TextDialogue initialDialogue;
 
-    [Header("Conditions")]
-    Dictionary<string, bool> condition;
+    /*[Header("Choice UI")]
+    [SerializeField][Tooltip("Built to be a Panel w/ a Layout Group Component")] public GameObject buttonContainer;
+    [SerializeField][Tooltip("Requires Button Component On Parent And TMP_Text on Child")] public GameObject buttonPrefab;*/
 
-    [Header("Responce Info")]
-    //temp
-    public string name;
+    // Used To Delete TextBoxes After Selection is Made
+    public List<GameObject> currentActiveButtons = new List<GameObject>();
 
-    [TextArea(3, 10)]
-    public string[] conditionResponses;*/
+    [System.Serializable]
+    public struct TextOptions
+    {
+        [Header("Choice Text")]
+        public string text;
+        public int optionId;
+    }
+
+    [System.Serializable]
+    public struct TextDialogue
+    {
+/*        [Header("Character Name")]
+        public string chatName;*/
+        [Header("All Choices")]
+        public List<TextOptions> choices;
+    }
+    /// <summary>
+    /// END OF CODE
+    /// </summary>
+    /// 
+    /// <summary>
+    /// Code here was written by Draven Bowton and modified by yours truly Alayna Garry
+    /// </summary>
+
+   /* public void GenerateTextButtons(TextDialogue textInfo)
+    {
+        RemoveActiveDialogue();
+
+        foreach (var info in textInfo.choices)
+        {
+            GameObject newButton = Instantiate(buttonPrefab, buttonContainer.transform);
+            newButton.name = textInfo.chatName + "Option: " + info.optionId;
+            newButton.GetComponentInChildren<TMP_Text>().text = info.text;
+            newButton.GetComponent<Button>().onClick.AddListener(() => OptionSelected(info.optionId));
+
+            currentActiveButtons.Add(newButton);
+        }
+    }
+
+    public void OptionSelected(int selection)
+    {
+        print(selection);
+    }
+
+    public void RemoveActiveDialogue()
+    {
+        for (int i = 0; i < currentActiveButtons.Count;)
+        {
+            GameObject go = currentActiveButtons[i];
+            currentActiveButtons.Remove(go);
+            Destroy(go);
+        }
+    }*/
+    /// <summary>
+    /// END OF DRAVEN'S CODE
+    /// </summary>
 }

@@ -8,7 +8,7 @@ using System;
 public class DialogueTrigger : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] public Response[] dialogue;
+    [SerializeField] public Response dialogue;
     [SerializeField] public Question question;
     [SerializeField] public TextMeshProUGUI interactUITxt;
     [SerializeField] public GameObject interactUI;
@@ -23,10 +23,12 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Trigger Bools")]
     bool isPlayerCloseEnough = false;
 
+    DialogueManager dialogueManager;
+
     private void Start()
     {
         interactUI.SetActive(false);
-        
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     private void Update()
