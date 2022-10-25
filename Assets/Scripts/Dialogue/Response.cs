@@ -70,7 +70,7 @@ public class Response
 
    /* public void GenerateTextButtons(TextDialogue textInfo)
     {
-        RemoveActiveDialogue();
+        RemoveActiveButtons();
 
         foreach (var info in textInfo.choices)
         {
@@ -88,7 +88,7 @@ public class Response
         print(selection);
     }
 
-    public void RemoveActiveDialogue()
+    public void RemoveActiveButtons()
     {
         for (int i = 0; i < currentActiveButtons.Count;)
         {

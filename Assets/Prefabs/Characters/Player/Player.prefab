@@ -172,11 +172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b661dd84b811c4e87037248ae12a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 0}
   defaultMovement: 0
   leftKey: 97
   rightKey: 100
   crouchKey: 115
   jumpKey: 32
+  interactKey: 101
   moveModifierKey: 304
   attackKey: 323
   walkSpeedMax: 2.5

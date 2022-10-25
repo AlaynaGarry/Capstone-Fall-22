@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
+  m_Name: Yes
+  m_EditorClassIdentifier: 
+  characterName: Charlie
+  character: {fileID: 0}
+  dialogue:
+  - I'm excited to see what you'll do!
+  - 'Maybe you''ll help with my rat problem. '
+  - 'Anyway, come back later to talk about that. '
+  - 'Enjoy the town! '
+  answerChoices:
+  - answerText: Rat Problem?
+    dialogueObject: {fileID: 11400000, guid: 58532696df375c046ac0273eecc6870b, type: 2}
+  - answerText: See ya later!
+    dialogueObject: {fileID: 11400000, guid: f1cbd5838bbdd61458ea6da61874b15d, type: 2}

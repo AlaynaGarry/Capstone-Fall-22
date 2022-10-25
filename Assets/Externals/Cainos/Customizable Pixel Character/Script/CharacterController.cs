@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -7,6 +8,10 @@ namespace Cainos
 {
     public class CharacterController : MonoBehaviour
     {
+        [SerializeField] private DialogueUI dialogueUI;
+        public DialogueUI DialogueUI => dialogueUI;
+        public IInteractable Interactable { get; set; }
+
         public static bool controlsEnabled = true;
 
         const float GROUND_CHECK_RADIUS = 0.1f;                 // radius of the overlap circle to determine if the character is on ground
@@ -16,6 +21,7 @@ namespace Cainos
         public KeyCode rightKey = KeyCode.D;
         public KeyCode crouchKey = KeyCode.S;
         public KeyCode jumpKey = KeyCode.Space;
+        public KeyCode interactKey = KeyCode.E;
         public KeyCode moveModifierKey = KeyCode.LeftShift;
 
         public KeyCode attackKey = KeyCode.Mouse0;
@@ -79,6 +85,19 @@ namespace Cainos
         {
             posBot = collider2d.offset - new Vector2(0.0f, collider2d.size.y * 0.5f);
             posTop = collider2d.offset + new Vector2(0.0f, collider2d.size.y * 0.5f);
+        }
+
+        private void Update()
+        {
+            /*if (Input.GetKeyDown(KeyCode.E))
+            {
+                if(Interactable != null)
+                {
+                    Interactable.Interact(this);
+                }
+            }*/
+
+            if (jumpTimer < jumpCooldown) jumpTimer += Time.deltaTime;
         }
 
         private void FixedUpdate()
@@ -223,11 +242,6 @@ namespace Cainos
                 fx.Facing = Mathf.RoundToInt(inputH);
                 fx.IsGrounded = isGrounded;
             }
-        }
-
-        private void Update()
-        {
-            if (jumpTimer < jumpCooldown) jumpTimer += Time.deltaTime;
         }
 
         public enum MovementType

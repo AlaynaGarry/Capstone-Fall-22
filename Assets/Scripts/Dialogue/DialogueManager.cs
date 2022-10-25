@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Anim")]
     public Animator dialogueAnimator;
+
     [Header("Player")]
     public GameObject player;
     public Animator playerAnimator;
