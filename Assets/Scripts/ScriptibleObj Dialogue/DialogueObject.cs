@@ -13,5 +13,4 @@ public class DialogueObject : ScriptableObject
     public bool HasAnswerChoices => AnswerChoices != null && AnswerChoices.Length > 0;
 
     public AnswerChoice[] AnswerChoices => answerChoices;
-
 }

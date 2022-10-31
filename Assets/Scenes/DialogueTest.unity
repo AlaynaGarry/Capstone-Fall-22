@@ -766,6 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df1e1ab58a193d4ba0dd2471417fe53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueData: {fileID: 11400000, guid: f066802dfbb16224d9048359cba711f6, type: 2}
   dialogueBox: {fileID: 178745613}
   textLabel: {fileID: 1448943595}
   button: {fileID: 872026824}
@@ -2209,13 +2210,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 516332745}
     - target: {fileID: 5374968637244814068, guid: 934230d352f9c2d4a840e466081c1fb0, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 178745613}
+    - target: {fileID: 5374968637244814068, guid: 934230d352f9c2d4a840e466081c1fb0, type: 3}
       propertyPath: interactUI
       value: 
       objectReference: {fileID: 516332746}
     - target: {fileID: 5374968637244814068, guid: 934230d352f9c2d4a840e466081c1fb0, type: 3}
       propertyPath: dialogueObject
       value: 
-      objectReference: {fileID: 11400000, guid: e3f970919a3eaef46854c5de1d0088fa, type: 2}
+      objectReference: {fileID: 11400000, guid: 124f9f832bcd3784f93e085bba20d7dc, type: 2}
     - target: {fileID: 5374968637244814068, guid: 934230d352f9c2d4a840e466081c1fb0, type: 3}
       propertyPath: interactionAnimator
       value: 

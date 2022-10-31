@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
-  m_Name: RatProblem-Q
+  m_Name: Test
   m_EditorClassIdentifier: 
-  characterName: Charlie
+  characterName: 
   dialogue:
-  - Yes... I have a rat problem in my garden.
-  - Can you dispose of them?
+  - Hello! This is the first dialogue...
+  - And, this is the Second!
+  - Is that all, Curious One?
   answerChoices:
-  - answerText: 'Yes! '
-    dialogueObject: {fileID: 11400000, guid: bdf808bcd080df049933577c7070ccd3, type: 2}
-  - answerText: Not right now...
-    dialogueObject: {fileID: 11400000, guid: e4a4ee334d2d8314ea20a9973b49456f, type: 2}
-  bypassDialogueObject: {fileID: 0}
-  seen: 0
+  - answerText: Yes.
+    dialogueObject: {fileID: 11400000, guid: b632f480574cb2848b8ad2a1c8fa771d, type: 2}
+  - answerText: No...
+    dialogueObject: {fileID: 11400000, guid: 17f1de98ba8112b4788a5613a472ed8b, type: 2}

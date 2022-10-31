@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Opening
   m_EditorClassIdentifier: 
   characterName: Charlie
-  character: {fileID: 0}
   dialogue:
   - Hey, are you the adventurer everyone has been asking about?
   answerChoices:
@@ -21,3 +20,5 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: bf7cd3275650c734d8fab42f156f96e1, type: 2}
   - answerText: I don't think so...
     dialogueObject: {fileID: 11400000, guid: ae688705064141844ad57c66014a7ec4, type: 2}
+  bypassDialogueObject: {fileID: 11400000, guid: 58532696df375c046ac0273eecc6870b, type: 2}
+  seen: 0

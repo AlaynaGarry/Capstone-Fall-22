@@ -4,9 +4,12 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class DialogueUI : MonoBehaviour
 {
+    [SerializeField] private DialogueData dialogueData;
+
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text textLabel;
     [SerializeField] public GameObject button;
@@ -28,6 +31,8 @@ public class DialogueUI : MonoBehaviour
     {
         IsOpen = false;
 
+
+
         typewriterEffect = GetComponent<TypewriterEffect>();
         answerChoiceHanlder = GetComponent<AnswerChoiceHandler>();
 
@@ -37,6 +42,20 @@ public class DialogueUI : MonoBehaviour
     public void ShowDialogue(DialogueObject dialogueObject)
     {
         IsOpen = true;
+        var dict = dialogueData.transitionDictionary;
+        var transitions = dict.FirstOrDefault(d => d.key.Equals(dialogueObject)).value;
+        if (transitions != null)
+        {
+            foreach (var transition in transitions)
+            {
+                if (transition.key.ToTransition())
+                {
+                    ShowDialogue(transition.value);
+                    return;
+                }
+            }
+        }
+
         dialogueAnimator.SetBool("IsOpen", true);
         playerAnimator.SetFloat("MovingBlend", 0);
 
@@ -54,7 +73,7 @@ public class DialogueUI : MonoBehaviour
     public void AdvanceDialogue()
     {
         //Click ContinueButton to continue the dialogue
-       
+
     }
 
     public IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
@@ -78,6 +97,7 @@ public class DialogueUI : MonoBehaviour
         }
         else
         {
+
             CloseDialogue();
         }
     }
@@ -90,7 +110,6 @@ public class DialogueUI : MonoBehaviour
         {
             yield return null;
 
-            
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 typewriterEffect.Stop();
@@ -105,16 +124,13 @@ public class DialogueUI : MonoBehaviour
         textLabel.text = string.Empty;
         playerActive = true;
         interactUI.SetActive(false);
-        StartCoroutine(EndDialogue());  
-        //EndDialogue();
+        StartCoroutine(EndDialogue());
     }
 
     IEnumerator EndDialogue()
     {
-        //dialogueAnimator.SetBool("IsOpen", false);
-
         yield return new WaitForSeconds(0.5f);
         Player.controlsEnabled = playerActive;
-       
+
     }
 }

@@ -12,7 +12,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     [Header("Animator")]
     [SerializeField] private Animator interactionAnimator;
 
-    private DialogueUI dialogueUI;
+    [SerializeField] private GameObject dialogueUI;
     private string playerInteract;
 
     private bool isPlayerCloseEnough = false;
@@ -25,8 +25,9 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        if (isPlayerCloseEnough && !dialogueUI.enabled)
+        if (isPlayerCloseEnough && dialogueUI.activeSelf)
         {
+            Debug.Log(dialogueUI.activeSelf);
             interactUI.SetActive(true);
         }   
     }
@@ -53,8 +54,6 @@ public class DialogueActivator : MonoBehaviour, IInteractable
             player.Interactable = this;
         }
     }
-
-
 
     private void OnTriggerExit2D(Collider2D other)
     {
