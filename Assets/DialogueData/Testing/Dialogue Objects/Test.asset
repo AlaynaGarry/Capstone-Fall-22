@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
-  m_Name: No
+  m_Name: Test
   m_EditorClassIdentifier: 
-  characterName: 
+  characterName: NPC 1
   dialogue:
-  - No...
-  answerChoices: []
+  - Hello! This is the first dialogue set...
+  answerChoices:
+  - answerText: Choice 1
+    dialogueObject: {fileID: 11400000, guid: b632f480574cb2848b8ad2a1c8fa771d, type: 2}
+  - answerText: Choice 2
+    dialogueObject: {fileID: 11400000, guid: 17f1de98ba8112b4788a5613a472ed8b, type: 2}

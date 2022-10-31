@@ -5,7 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class BoolCondition : Condition  
 {
+	[Header("Bool Ref")]
 	[SerializeField] BoolRef parameter;
+	[Header("Current Condition Status")]
 	[SerializeField] bool condition;
 
     public BoolCondition(BoolRef parameter, bool condition)

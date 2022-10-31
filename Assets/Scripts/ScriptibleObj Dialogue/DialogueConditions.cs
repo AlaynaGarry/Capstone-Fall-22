@@ -6,9 +6,7 @@ using UnityEngine;
 
 public class DialogueConditions : MonoBehaviour 
 { 
-    [Header("BoolData")]
-    [SerializeField] BoolData[] boolDatas;
-    [Header("Transition")]
+    /*[Header("Transition")]
     [SerializeReference] Transition[] transitions;
 
     private void Update()
@@ -23,7 +21,7 @@ public class DialogueConditions : MonoBehaviour
     }
     private void Test()
     {
-/*      
+*//*      
         yield return new WaitForSeconds(2);
         if (boolDatas != null)
         {
@@ -32,6 +30,6 @@ public class DialogueConditions : MonoBehaviour
             yield break;
         }
         yield return null;
-*/
-    }
+*//*
+    }*/
 }

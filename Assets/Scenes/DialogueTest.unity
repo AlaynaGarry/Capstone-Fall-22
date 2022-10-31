@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df1e1ab58a193d4ba0dd2471417fe53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 11400000, guid: f066802dfbb16224d9048359cba711f6, type: 2}
+  dialogueData: {fileID: 11400000, guid: 36dc3f2d136b9ef41a34b82b74085f44, type: 2}
   dialogueBox: {fileID: 178745613}
   textLabel: {fileID: 1448943595}
   button: {fileID: 872026824}

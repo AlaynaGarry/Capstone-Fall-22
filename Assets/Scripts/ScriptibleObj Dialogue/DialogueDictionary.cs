@@ -17,5 +17,6 @@ public struct DialogueToKVP
 {
     [Header("Origin Dialogue Object")]
     public DialogueObject key;
+    [Header("Transition to Dialogue")]
     public TransitionToDialogue[] value;
 }

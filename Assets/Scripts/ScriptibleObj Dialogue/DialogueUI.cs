@@ -31,8 +31,6 @@ public class DialogueUI : MonoBehaviour
     {
         IsOpen = false;
 
-
-
         typewriterEffect = GetComponent<TypewriterEffect>();
         answerChoiceHanlder = GetComponent<AnswerChoiceHandler>();
 

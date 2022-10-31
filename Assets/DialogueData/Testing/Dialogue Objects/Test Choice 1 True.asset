@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abd9c8814a4da654099521d70cf082f0, type: 3}
-  m_Name: Skip Opening Ref
+  m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
+  m_Name: Test Choice 1 True
   m_EditorClassIdentifier: 
-  value: 1
+  characterName: System
+  dialogue:
+  - Bool Met NPC 1 True
+  answerChoices: []

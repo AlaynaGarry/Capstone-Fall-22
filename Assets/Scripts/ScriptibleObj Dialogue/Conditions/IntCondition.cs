@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[CreateAssetMenu(fileName = "Data", menuName = "Data/IntCondition")]
 [System.Serializable]
 public class IntCondition : Condition
 {
-	IntRef parameter;
-	int condition;
-	Predicate predicate;
+    [Header("Bool Ref")]
+    [SerializeField] IntRef parameter;
+    [Header("Current Condition Status")]
+    [SerializeField] int condition;
+	[Header("Required Predicate")]
+	[SerializeField] Predicate predicate;
 
 	public IntCondition(IntRef parameter, Predicate predicate, int condition)
 	{

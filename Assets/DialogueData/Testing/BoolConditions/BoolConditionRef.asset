@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
-  m_Name: Yes
+  m_Script: {fileID: 11500000, guid: abd9c8814a4da654099521d70cf082f0, type: 3}
+  m_Name: BoolConditionRef
   m_EditorClassIdentifier: 
-  characterName: 
-  dialogue:
-  - Yes.
-  answerChoices: []
-  bypassDialogueObject: {fileID: 0}
-  seen: 0
+  value: 1
