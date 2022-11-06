@@ -95,10 +95,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8016959031835169400}
   - component: {fileID: 7699277279782710533}
-  - component: {fileID: 3297107939035407520}
   - component: {fileID: 2824024058581086464}
   - component: {fileID: 5082379836295970583}
   - component: {fileID: 2869986717286687701}
+  - component: {fileID: 698833543}
   m_Layer: 8
   m_Name: PF Pixel Character - Archer
   m_TagString: Player
@@ -160,42 +160,6 @@ MonoBehaviour:
   movingBlend: 0
   clipHair: 1
   blinkInterval: {x: 0.5, y: 3}
---- !u!114 &3297107939035407520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3648398732550460207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21b661dd84b811c4e87037248ae12a28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 0}
-  defaultMovement: 0
-  leftKey: 97
-  rightKey: 100
-  crouchKey: 115
-  jumpKey: 32
-  interactKey: 101
-  moveModifierKey: 304
-  attackKey: 323
-  walkSpeedMax: 2.5
-  walkAcc: 10
-  runSpeedMax: 5
-  runAcc: 10
-  crouchSpeedMax: 1
-  crouchAcc: 8
-  airSpeedMax: 2
-  airAcc: 8
-  groundBrakeAcc: 6
-  airBrakeAcc: 1
-  jumpSpeed: 5
-  jumpCooldown: 0.5
-  jumpGravityMutiplier: 0.6
-  fallGravityMutiplier: 1.3
-  groundCheckRadius: 0.3
 --- !u!70 &2824024058581086464
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -285,6 +249,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &698833543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3648398732550460207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a42bf42ba522d74cbfa7e13cdae3bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 0}
+  defaultMovement: 0
+  leftKey: 97
+  rightKey: 100
+  crouchKey: 115
+  jumpKey: 32
+  interactKey: 101
+  moveModifierKey: 304
+  attackKey: 323
+  walkSpeedMax: 2.5
+  walkAcc: 10
+  runSpeedMax: 5
+  runAcc: 10
+  crouchSpeedMax: 1
+  crouchAcc: 8
+  airSpeedMax: 2
+  airAcc: 8
+  groundBrakeAcc: 6
+  airBrakeAcc: 1
+  jumpSpeed: 5
+  jumpCooldown: 0.5
+  jumpGravityMutiplier: 0.6
+  fallGravityMutiplier: 1.3
+  groundCheckRadius: 0.3
 --- !u!1 &5729664852351836646
 GameObject:
   m_ObjectHideFlags: 0

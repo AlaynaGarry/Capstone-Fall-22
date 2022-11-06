@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
+  m_Name: Rumors_Quests
+  m_EditorClassIdentifier: 
+  character: {fileID: 8466223457855610429, guid: 0d18400bcca7b6747bfb0a79fa0e524e, type: 3}
+  dialogue:
+  - I've heard that the Mayor is lookign for you.
+  - 'But before you meet him I was hoping an adventurer would take care of my rat
+    problem. '
+  answerChoices:
+  - answerText: I think I'll go meet the Mayor.
+    dialogueObject: {fileID: 11400000, guid: 74f4202eda1389d4fae9de7eb549d0de, type: 2}
+  - answerText: Rat Problem?
+    dialogueObject: {fileID: 11400000, guid: 6b5b08df12b82d042b3a00e83ef60d3a, type: 2}
+  conditions:
+  - {fileID: 0}

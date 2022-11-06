@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  characterName: NPC 1
+  character: {fileID: 8466223457855610429, guid: 0d18400bcca7b6747bfb0a79fa0e524e, type: 3}
   dialogue:
   - Hello! This is the first dialogue set...
   answerChoices:
@@ -20,3 +20,5 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: b632f480574cb2848b8ad2a1c8fa771d, type: 2}
   - answerText: Choice 2
     dialogueObject: {fileID: 11400000, guid: 17f1de98ba8112b4788a5613a472ed8b, type: 2}
+  conditions:
+  - {fileID: 11400000, guid: 55801e78a50a54b43ab09ed76243714f, type: 2}

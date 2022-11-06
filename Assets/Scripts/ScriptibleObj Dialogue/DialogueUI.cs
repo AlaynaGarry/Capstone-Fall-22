@@ -62,7 +62,7 @@ public class DialogueUI : MonoBehaviour
         playerActive = false;
         Player.controlsEnabled = playerActive;
 
-        NPCNameText.text = dialogueObject.characterName;
+        NPCNameText.text = dialogueObject.character.name;
 
         dialogueBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(dialogueObject));
@@ -89,13 +89,19 @@ public class DialogueUI : MonoBehaviour
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
 
+        foreach (var dialogue in dialogueObject.conditions)
+        {
+            dialogueData.TriggerDialogueCondition(dialogue);
+            Debug.Log("Dialogue Conditions: ");
+        }
+
         if (dialogueObject.HasAnswerChoices)
         {
             answerChoiceHanlder.ShowChoices(dialogueObject.AnswerChoices);
         }
         else
         {
-
+            //set dialogueObject conditions.conditions !conditions.conditions
             CloseDialogue();
         }
     }

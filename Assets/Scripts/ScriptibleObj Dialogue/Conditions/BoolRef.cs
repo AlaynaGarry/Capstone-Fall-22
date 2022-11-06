@@ -6,7 +6,7 @@ using UnityEngine;
 public class BoolRef: ScriptableObject
 {
 	[Header("Condition Value"), Tooltip("Value the Dialogue Object needs to be")]
-	public bool value;
+	[SerializeField] public bool value = true;
 
 	public static implicit operator bool(BoolRef r) { return r.value; }
 }

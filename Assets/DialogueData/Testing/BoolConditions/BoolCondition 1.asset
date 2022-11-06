@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BoolCondition 1
   m_EditorClassIdentifier: 
   parameter: {fileID: 11400000, guid: b0724e0e0d6e52b4da6f333c5eba64c6, type: 2}
-  condition: 1
+  condition: 0

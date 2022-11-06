@@ -27,7 +27,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     {
         if (isPlayerCloseEnough && dialogueUI.activeSelf)
         {
-            Debug.Log(dialogueUI.activeSelf);
+            //Debug.Log(dialogueUI.activeSelf);
             interactUI.SetActive(true);
         }   
     }

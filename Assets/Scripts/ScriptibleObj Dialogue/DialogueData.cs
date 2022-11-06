@@ -8,4 +8,9 @@ public class DialogueData : ScriptableObject
 {
     [Tooltip("Custom Dictionary of Dialogue Object Types")]
     [SerializeField] public DialogueToKVP[] transitionDictionary;
+
+    public void TriggerDialogueCondition(BoolCondition condition)
+    {
+        condition.Condition = !condition.Condition;
+    }
 }

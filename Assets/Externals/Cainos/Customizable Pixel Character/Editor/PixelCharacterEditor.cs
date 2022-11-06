@@ -51,7 +51,7 @@ public class PixelCharacterEditor : Editor
 
     private bool foldout_objects = false;
     private bool foldout_appearance = true;
-    private bool foldout_params = true;
+    //private bool foldout_params = true;
     private bool foldout_runtime = true;
 
     public void OnEnable()

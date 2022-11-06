@@ -2147,7 +2147,7 @@ GameObject:
   - component: {fileID: 5171644273339974939}
   - component: {fileID: 5374968637244814068}
   m_Layer: 8
-  m_Name: DialogueTrigger
+  m_Name: Dialogue Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2197,6 +2197,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueObject: {fileID: 11400000, guid: 124f9f832bcd3784f93e085bba20d7dc, type: 2}
+  textLabel: {fileID: 0}
+  interactUI: {fileID: 0}
+  interactionAnimator: {fileID: 0}
+  dialogueUI: {fileID: 0}
 --- !u!1 &1885194120650111072
 GameObject:
   m_ObjectHideFlags: 0

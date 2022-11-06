@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: DialogueData
   m_EditorClassIdentifier: 
   transitionDictionary:
-  - key: {fileID: 11400000, guid: 124f9f832bcd3784f93e085bba20d7dc, type: 2}
+  - Name: Transition 1
+    key: {fileID: 11400000, guid: 124f9f832bcd3784f93e085bba20d7dc, type: 2}
     value:
-    - key:
+    - Name: Value & Next Object for 1st Condition
+      key:
         conditions:
         - {fileID: 11400000, guid: 0412f0566d3a5104a87f42009e26bd4f, type: 2}
+        - {fileID: 11400000, guid: 55f1a766ccca2b2499cd4429f6f6d318, type: 2}
       value: {fileID: 11400000, guid: c6688cc59ef36fa4cac6512f910ec62c, type: 2}
-    - key:
+    - Name: Value & Next Object for 2nd Condition
+      key:
         conditions:
         - {fileID: 11400000, guid: 55801e78a50a54b43ab09ed76243714f, type: 2}
       value: {fileID: 11400000, guid: 6578cf5c70aa93c44a8adbeb459e44d2, type: 2}

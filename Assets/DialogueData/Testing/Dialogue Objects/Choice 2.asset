@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
   m_Name: Choice 2
   m_EditorClassIdentifier: 
-  characterName: NPC 1
+  character: {fileID: 8466223457855610429, guid: 0d18400bcca7b6747bfb0a79fa0e524e, type: 3}
   dialogue:
-  - Choice 2
+  - This is the Choice 2 path.
+  - 'Choose one:'
   answerChoices:
   - answerText: Yes
     dialogueObject: {fileID: 11400000, guid: e8f91e3e843a74c49a1ce46050c70ecc, type: 2}

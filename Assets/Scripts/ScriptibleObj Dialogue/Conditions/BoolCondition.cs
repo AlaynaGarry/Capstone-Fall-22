@@ -8,8 +8,9 @@ public class BoolCondition : Condition
 	[Header("Bool Ref")]
 	[SerializeField] BoolRef parameter;
 	[Header("Current Condition Status")]
-	[SerializeField] bool condition;
+	[SerializeField] public bool condition;
 
+	public bool Condition { get => condition; set => condition = value; }
     public BoolCondition(BoolRef parameter, bool condition)
 	{
 		this.parameter = parameter;
