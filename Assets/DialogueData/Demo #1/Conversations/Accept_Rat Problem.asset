@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
   m_Name: Accept_Rat Problem
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  character: {fileID: 8466223457855610429, guid: 0d18400bcca7b6747bfb0a79fa0e524e, type: 3}
   dialogue:
   - Thank you so much!
   - Whipe out those pesky rats and I'll reward you!
   answerChoices: []
-  conditions: []
+  conditions:
+  - {fileID: 11400000, guid: 695dbb9abae5eb94aa9f15380b9c55ec, type: 2}

@@ -1,0 +1,26 @@
+GridBackground {
+	--grid-background-color: #282828;
+	--line-color: rgba(193,196,192,0.1);
+	--thick-line-color: rgba(193,196,192,0.1);
+	--spacing: 10;
+}
+
+.nameOfDialogueContainer{
+	margin-top: 5px;
+	margin-left: 5px;
+	padding-right: 5px;
+}
+
+.node #title{
+	background-color: rgb(103, 39, 138);
+}
+
+#node-border{
+	background-color: rgb(0, 0, 0);
+}
+
+.Label{
+	margin-top: 5px;
+	margin-left: 4px;
+	font-size: 15px;
+}

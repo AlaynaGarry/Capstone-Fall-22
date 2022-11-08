@@ -22,5 +22,4 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: 74f4202eda1389d4fae9de7eb549d0de, type: 2}
   - answerText: Rat Problem?
     dialogueObject: {fileID: 11400000, guid: 6b5b08df12b82d042b3a00e83ef60d3a, type: 2}
-  conditions:
-  - {fileID: 0}
+  conditions: []

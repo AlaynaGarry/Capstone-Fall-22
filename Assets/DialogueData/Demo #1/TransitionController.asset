@@ -21,6 +21,14 @@ MonoBehaviour:
         conditions:
         - {fileID: 11400000, guid: 881a5d0599cfc6d43a3139613f7a0ec6, type: 2}
       value: {fileID: 11400000, guid: e9423dbcd21e68d4495c7541f0308b66, type: 2}
+  - Name: About Town
+    key: {fileID: 11400000, guid: e9423dbcd21e68d4495c7541f0308b66, type: 2}
+    value:
+    - Name: About Town -> Quests/Rumors
+      key:
+        conditions:
+        - {fileID: 11400000, guid: 278b45acce16e8941b925abdaae0b769, type: 2}
+      value: {fileID: 11400000, guid: d56b368633e3e4d46b5384700163064f, type: 2}
   - Name: Charlie Quests
     key: {fileID: 11400000, guid: d56b368633e3e4d46b5384700163064f, type: 2}
     value:

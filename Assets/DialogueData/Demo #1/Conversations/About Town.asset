@@ -20,4 +20,5 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: f966c184cc0fb9241b985d94c652ef0e, type: 2}
   - answerText: I have not...
     dialogueObject: {fileID: 11400000, guid: be2cb7bb9510e754d9026b3e1a439d0a, type: 2}
-  conditions: []
+  conditions:
+  - {fileID: 11400000, guid: 278b45acce16e8941b925abdaae0b769, type: 2}
