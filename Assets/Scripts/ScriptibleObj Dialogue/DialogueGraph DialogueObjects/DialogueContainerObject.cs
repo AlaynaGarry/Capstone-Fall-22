@@ -36,6 +36,7 @@ public class NodeLinkData
     public string targetNodeGuid;
 }
 
+[System.Serializable]
 public class BaseNodeData
 {
     public string nodeGuid;

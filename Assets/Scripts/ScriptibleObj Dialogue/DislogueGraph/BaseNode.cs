@@ -14,7 +14,7 @@ public class BaseNode : Node
     protected DialogueEditorWindow editorWindow;
     protected Vector2 defaultNodeSize = new Vector2(200, 250);
 
-    protected string NodeGUID { get => nodeGUID; set => nodeGUID = value; }
+    public string NodeGUID { get => nodeGUID; set => nodeGUID = value; }
 
     public BaseNode()
     {
