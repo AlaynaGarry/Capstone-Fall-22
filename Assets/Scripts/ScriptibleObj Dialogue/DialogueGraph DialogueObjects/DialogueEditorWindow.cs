@@ -12,6 +12,9 @@ public class DialogueEditorWindow : EditorWindow
 {
     private DialogueContainerObject currentContainerObject;
     private DialogueGraphView graphView;
+
+    private DialogueSaveAndLoad saveAndLoad;
+
     private ToolbarMenu toolbarMenu;
     private Label nameOfDialogueContainer;
 
@@ -44,15 +47,18 @@ public class DialogueEditorWindow : EditorWindow
     }
 
     private void Save() 
-    { 
-        Debug.Log("Save");
+    {
+        if(currentContainerObject != null)
+            saveAndLoad.Save(currentContainerObject);
     }
 
     private void Load()
     {
-        Debug.Log("Load");
         if (currentContainerObject != null)
+        {
             nameOfDialogueContainer.text = "Name:   " + currentContainerObject.name;
+            saveAndLoad.Load(currentContainerObject);
+        }
     }
 
     private void ConstructGraphView()
@@ -60,6 +66,8 @@ public class DialogueEditorWindow : EditorWindow
         graphView = new DialogueGraphView(this);
         graphView.StretchToParentSize();
         rootVisualElement.Add(graphView);
+
+        saveAndLoad = new DialogueSaveAndLoad(graphView);
     }
 
     private void GenerateToolBar()

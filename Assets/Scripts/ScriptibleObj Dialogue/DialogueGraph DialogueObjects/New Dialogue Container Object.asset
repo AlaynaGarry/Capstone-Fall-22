@@ -12,3 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b541f962f513dc47b7c42c163584abb, type: 3}
   m_Name: New Dialogue Container Object
   m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: e45a4655-9522-4b88-a0ec-94fc650bc9c8
+    targetNodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+  - baseNodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+    targetNodeGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+  dialogueNodeDatas:
+  - nodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+    position: {x: 192, y: 176}
+    dialogueNodePorts:
+    - InputGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+      OutputGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+    - InputGuid: 
+      OutputGuid: 
+    - InputGuid: 
+      OutputGuid: 
+    sprite: {fileID: 21300000, guid: da7129ed6a246f048a49d8d97de2d2d4, type: 3}
+    characterImageLocation: 1
+    name: hih
+  endNodeDatas:
+  - nodeGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+    position: {x: 483, y: 147}
+    endNodeType: 0
+  startNodeDatas:
+  - nodeGuid: e45a4655-9522-4b88-a0ec-94fc650bc9c8
+    position: {x: 29, y: 147}
+  eventNodeDatas: []

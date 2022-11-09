@@ -21,7 +21,7 @@ public class DialogueNode : BaseNode
     private Sprite characterImage;
     private CharacterImageLocation characterImageLocation;
 
-    private List<DialogueNodePort> dialogueNodePorts = new List<DialogueNodePort>();
+    public List<DialogueNodePort> dialogueNodePorts = new List<DialogueNodePort>();
 
     public string Name { get => name; set => name = value; }
     public Sprite CharacterImage { get => characterImage; set => characterImage = value; }
