@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b541f962f513dc47b7c42c163584abb, type: 3}
+  m_Name: DialogueGraphObject
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - NodeLinkName: 
+    baseNodeGuid: e45a4655-9522-4b88-a0ec-94fc650bc9c8
+    targetNodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+  - NodeLinkName: 
+    baseNodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+    targetNodeGuid: e540a09f-070b-4d63-b322-088625a71d10
+  - NodeLinkName: 
+    baseNodeGuid: e540a09f-070b-4d63-b322-088625a71d10
+    targetNodeGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+  dialogueNodeDatas:
+  - BaseNodeName: 
+    nodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+    position: {x: 192, y: 176}
+    dialogueNodePorts:
+    - DialoguePortName: 
+      PortGuid: 4b0c414f-50be-45d3-a141-d1ae12586019
+      InputGuid: e540a09f-070b-4d63-b322-088625a71d10
+      OutputGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+      TextLanguages:
+      - LanguageType: 0
+        LanguageGenericType: 1
+    - DialoguePortName: 
+      PortGuid: a3fc19c2-28ea-4cc1-b45b-9d5457143082
+      InputGuid: 
+      OutputGuid: 
+      TextLanguages:
+      - LanguageType: 0
+        LanguageGenericType: 2
+    - DialoguePortName: 
+      PortGuid: 16835784-e532-4eb0-b52e-ca5e845c4c75
+      InputGuid: 
+      OutputGuid: 
+      TextLanguages:
+      - LanguageType: 0
+        LanguageGenericType: 3
+    sprite: {fileID: 21300000, guid: da7129ed6a246f048a49d8d97de2d2d4, type: 3}
+    characterImageLocation: 1
+    name: Node 1
+    TextLanguages:
+    - LanguageType: 0
+      LanguageGenericType: Node 1 Text
+  - BaseNodeName: 
+    nodeGuid: e540a09f-070b-4d63-b322-088625a71d10
+    position: {x: 432, y: 161}
+    dialogueNodePorts:
+    - DialoguePortName: 
+      PortGuid: beeea6df-eb3b-4ef6-a434-3d65db854c0a
+      InputGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+      OutputGuid: e540a09f-070b-4d63-b322-088625a71d10
+      TextLanguages:
+      - LanguageType: 0
+        LanguageGenericType: 1
+    sprite: {fileID: 0}
+    characterImageLocation: 0
+    name: Node 2
+    TextLanguages:
+    - LanguageType: 0
+      LanguageGenericType: Node 2 Text
+  endNodeDatas:
+  - BaseNodeName: 
+    nodeGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+    position: {x: 685, y: 128}
+    endNodeType: 1
+  startNodeDatas:
+  - BaseNodeName: 
+    nodeGuid: e45a4655-9522-4b88-a0ec-94fc650bc9c8
+    position: {x: 29, y: 147}
+  eventNodeDatas: []

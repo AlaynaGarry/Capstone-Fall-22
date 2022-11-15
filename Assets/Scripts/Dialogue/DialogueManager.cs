@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         [System.Serializable]
         public struct TextDialogue
         {
-            [Header("Character Name")]
+            [Header("Character NodeName")]
             public string chatName;
             [Header("All Choices")]
             public List<TextOptions> choices;

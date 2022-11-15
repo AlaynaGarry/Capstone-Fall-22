@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private DialogueUI dialogueUI;
-    public DialogueUI DialogueUI => dialogueUI;
+    [SerializeField] private DialogueController dialogueController;
+    public DialogueController DialogueController => dialogueController;
     public IInteractable Interactable { get; set; }
 
     public static bool controlsEnabled = true;
@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (dialogueUI.IsOpen) return;
+        if (dialogueController.IsOpen) return;
 
         if (Input.GetKeyDown(KeyCode.E))
         {

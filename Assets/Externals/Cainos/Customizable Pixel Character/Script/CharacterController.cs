@@ -93,7 +93,7 @@ namespace Cainos
             {
                 if(Interactable != null)
                 {
-                    Interactable.Interact(this);
+                    Interactable.InteractwithNPC(this);
                 }
             }*/
 

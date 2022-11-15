@@ -55,7 +55,7 @@ public class Response
     [System.Serializable]
     public struct TextDialogue
     {
-/*        [Header("Character Name")]
+/*        [Header("Character NodeName")]
         public string chatName;*/
         [Header("All Choices")]
         public List<TextOptions> choices;
@@ -75,7 +75,7 @@ public class Response
         foreach (var info in textInfo.choices)
         {
             GameObject newButton = Instantiate(buttonPrefab, buttonContainer.transform);
-            newButton.name = textInfo.chatName + "Option: " + info.optionId;
+            newButton.nameTxt = textInfo.chatName + "Option: " + info.optionId;
             newButton.GetComponentInChildren<TMP_Text>().text = info.text;
             newButton.GetComponent<Button>().onClick.AddListener(() => OptionSelected(info.optionId));
 

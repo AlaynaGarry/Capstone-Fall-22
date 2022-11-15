@@ -36,7 +36,7 @@ public class ButtonTestSript : MonoBehaviour
         RemoveActiveDialogue();
 
         //GameObject newText = Instantiate(textPrefab, buttonContainer.transform);
-        //newText.name = textInfo.chatName;
+        //newText.nameTxt = textInfo.chatName;
         //newText.GetComponent<TMP_Text>().text = textInfo.dialogue;
 
         //currentActiveButtons.Add(newText);

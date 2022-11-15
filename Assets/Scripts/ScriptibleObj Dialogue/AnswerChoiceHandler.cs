@@ -12,18 +12,17 @@ public class AnswerChoiceHandler : MonoBehaviour
 
     List<GameObject> currentActiveButtons = new List<GameObject>();
 
-    private DialogueUI dialogueUI;
+    private DialogueController dialogueController;
 
     private void Start()
     {
-        dialogueUI = GetComponent<DialogueUI>();
-
+        dialogueController = GetComponent<DialogueController>();
     }
 
     public void ShowChoices(AnswerChoice[] answerChoices)
     {
         float choiceBoxHeight = 0;
-        dialogueUI.button.SetActive(false);
+        //dialogueController.button.SetActive(false);
         foreach (AnswerChoice answerChoice in answerChoices)
         {
             GameObject choiceButton = Instantiate(answerChoiceButtonTemplate.gameObject, answerChoiceContainer);
@@ -44,8 +43,8 @@ public class AnswerChoiceHandler : MonoBehaviour
         answerChoiceBox.gameObject.SetActive(false);
 
         RemoveActiveButtons();
-        dialogueUI.button.SetActive(true);
-        dialogueUI.ShowDialogue(answerChoice.DialogueObject);
+        //dialogueController.button.SetActive(true);
+        dialogueController.ShowDialogue(answerChoice.DialogueObject);
     }
 
     public void RemoveActiveButtons()

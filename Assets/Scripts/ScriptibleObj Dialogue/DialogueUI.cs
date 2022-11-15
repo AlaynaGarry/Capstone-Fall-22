@@ -8,7 +8,7 @@ using System.Linq;
 
 public class DialogueUI : MonoBehaviour
 {
-    [SerializeField] private DialogueData dialogueData;
+   /* [SerializeField] private DialogueData dialogueData;
 
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text textLabel;
@@ -62,10 +62,10 @@ public class DialogueUI : MonoBehaviour
         playerActive = false;
         Player.controlsEnabled = playerActive;
 
-        NPCNameText.text = dialogueObject.character.name;
+        //NPCNameText.text = dialogueObject.character.name;
 
-        dialogueBox.SetActive(true);
-        StartCoroutine(StepThroughDialogue(dialogueObject));
+        //dialogueBox.SetActive(true);
+        //StartCoroutine(StepThroughDialogue(dialogueObject));
     }
 
     public void AdvanceDialogue()
@@ -81,7 +81,7 @@ public class DialogueUI : MonoBehaviour
             string dialogue = dialogueObject.Dialogue[i];
 
             yield return RunTypingEffect(dialogue);
-            textLabel.text = dialogue;
+            //textLabel.text = dialogue;
 
             if (i == dialogueObject.Dialogue.Length - 1 && dialogueObject.HasAnswerChoices) break;
 
@@ -108,7 +108,7 @@ public class DialogueUI : MonoBehaviour
 
     private IEnumerator RunTypingEffect(string dialogue)
     {
-        typewriterEffect.Run(dialogue, textLabel);
+        //typewriterEffect.Run(dialogue, textLabel);
 
         while (typewriterEffect.IsRunning)
         {
@@ -124,8 +124,6 @@ public class DialogueUI : MonoBehaviour
     private void CloseDialogue()
     {
         IsOpen = false;
-        dialogueBox.SetActive(false);
-        textLabel.text = string.Empty;
         playerActive = true;
         interactUI.SetActive(false);
         StartCoroutine(EndDialogue());
@@ -136,5 +134,5 @@ public class DialogueUI : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Player.controlsEnabled = playerActive;
 
-    }
+    }*/
 }

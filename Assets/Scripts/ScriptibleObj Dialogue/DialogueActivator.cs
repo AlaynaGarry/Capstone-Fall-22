@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class DialogueActivator : MonoBehaviour, IInteractable
 {
+    //[SerializeField] private DialogueObject dialogueObject;
     [SerializeField] private DialogueObject dialogueObject;
+    [SerializeField] private GameObject dialogueUI;
+
+    [SerializeField] private DialogueController dialogueController;
 
     [Header("UI")]
     [SerializeField] public TMP_Text textLabel;
@@ -12,7 +16,6 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     [Header("Animator")]
     [SerializeField] private Animator interactionAnimator;
 
-    [SerializeField] private GameObject dialogueUI;
     private string playerInteract;
 
     private bool isPlayerCloseEnough = false;
@@ -27,7 +30,6 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     {
         if (isPlayerCloseEnough && dialogueUI.activeSelf)
         {
-            //Debug.Log(dialogueUI.activeSelf);
             interactUI.SetActive(true);
         }   
     }
@@ -36,7 +38,6 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     {
         interactUI.SetActive(true);
         interactionAnimator.SetTrigger("Start");
-        Debug.Log(playerInteract);
         textLabel.text = playerInteract;
     }
     public void DeactivateInteractableText()
@@ -70,6 +71,8 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
-        player.DialogueUI.ShowDialogue(dialogueObject);
+        player.DialogueController.ShowDialogue(dialogueObject);
+        //dialogueController.ShowDialogue(dialogueObject);
+        //dialogueController.SetText("Name", "Line");
     }
 }
