@@ -7,7 +7,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     [SerializeField] private DialogueObject dialogueObject;
     [SerializeField] private GameObject dialogueUI;
 
-    [SerializeField] private DialogueController dialogueController;
+    [SerializeField] private DialogueUI dialogueController;
 
     [Header("UI")]
     [SerializeField] public TMP_Text textLabel;
@@ -71,7 +71,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
-        player.DialogueController.ShowDialogue(dialogueObject);
+        player.DialogueUI.ShowDialogue(dialogueObject);
         //dialogueController.ShowDialogue(dialogueObject);
         //dialogueController.SetText("Name", "Line");
     }

@@ -8,7 +8,7 @@ using System.Linq;
 
 public class DialogueUI : MonoBehaviour
 {
-   /* [SerializeField] private DialogueData dialogueData;
+    [SerializeField] private DialogueData dialogueData;
 
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text textLabel;
@@ -134,5 +134,5 @@ public class DialogueUI : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Player.controlsEnabled = playerActive;
 
-    }*/
+    }
 }

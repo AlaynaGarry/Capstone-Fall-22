@@ -12,13 +12,7 @@ public class DialogueController : MonoBehaviour
     [Header("Dialogue box")]
     [SerializeField] private TMP_Text textName;
     [SerializeField] private TMP_Text textBox;
-    /*  
-        [Header("Image")]
-        [SerializeField] private Image leftImage;
-        [SerializeField] private GameObject leftImageGO;
-        [SerializeField] private Image rightImage;
-        [SerializeField] private GameObject rightImageGO;
-    */
+
 
     //temp (replace with button code)
     /* 
@@ -52,9 +46,8 @@ public class DialogueController : MonoBehaviour
     public void ShowDialogue(bool show)
     {
         IsOpen = true;
-        /*
-         * temp remove - needs restructure
-        var dict = dialogueData.transitionDictionary;
+
+       /* var dict = dialogueData.transitionDictionary;
         var transitions = dict.FirstOrDefault(d => d.key.Equals(dialogueObject)).value;
         if (transitions != null)
         {
