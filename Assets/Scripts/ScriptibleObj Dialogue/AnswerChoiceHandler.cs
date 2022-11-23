@@ -23,7 +23,7 @@ public class AnswerChoiceHandler : MonoBehaviour
     public void ShowChoices(AnswerChoice[] answerChoices)
     {
         float choiceBoxHeight = 0;
-        dialogueUI.button.SetActive(false);
+        //dialogueUI.button.SetActive(false);
         foreach (AnswerChoice answerChoice in answerChoices)
         {
             GameObject choiceButton = Instantiate(answerChoiceButtonTemplate.gameObject, answerChoiceContainer);
@@ -44,7 +44,7 @@ public class AnswerChoiceHandler : MonoBehaviour
         answerChoiceBox.gameObject.SetActive(false);
 
         RemoveActiveButtons();
-        dialogueUI.button.SetActive(true);
+        //dialogueUI.button.SetActive(true);
         dialogueUI.ShowDialogue(answerChoice.DialogueObject);
     }
 

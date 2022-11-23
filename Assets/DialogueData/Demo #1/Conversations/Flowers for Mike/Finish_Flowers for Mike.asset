@@ -17,4 +17,5 @@ MonoBehaviour:
   - You got them! Thank you so much!
   - You've taken time to do me this kindness. This old man can't thank you enough.
   answerChoices: []
-  conditions: []
+  conditions:
+  - {fileID: 11400000, guid: e3f29bf3f0ffbe54e9df48526ddf811a, type: 2}

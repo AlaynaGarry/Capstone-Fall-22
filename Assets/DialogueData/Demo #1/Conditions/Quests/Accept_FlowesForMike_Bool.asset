@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Accept_FlowesForMike_Bool
   m_EditorClassIdentifier: 
   parameter: {fileID: 11400000, guid: 3572d2803e7896645944d1225d6b7c3a, type: 2}
-  condition: 1
+  condition: 0

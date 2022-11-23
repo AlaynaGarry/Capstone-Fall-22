@@ -37,3 +37,11 @@ MonoBehaviour:
         conditions:
         - {fileID: 11400000, guid: 3326e5ed89b5d964584c225551ae6da6, type: 2}
       value: {fileID: 11400000, guid: 061f8e7415018cb4b8f274c4f16c3e29, type: 2}
+  - Name: Meet Mike
+    key: {fileID: 11400000, guid: eeb3650317041474c9a42dfb2fd4e2eb, type: 2}
+    value:
+    - Name: Meet Mike -> pt2
+      key:
+        conditions:
+        - {fileID: 0}
+      value: {fileID: 11400000, guid: 70a21c54d2f535848a37b9b78e26cb10, type: 2}

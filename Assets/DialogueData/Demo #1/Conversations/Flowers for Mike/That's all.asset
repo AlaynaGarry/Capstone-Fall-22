@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
-  m_Name: Meet Mayor Mike
+  m_Name: That's all
   m_EditorClassIdentifier: 
   character: {fileID: 2569382142488251037, guid: 7bd08bc5562add94db88e0b05ee1e339, type: 3}
   dialogue:
-  - Oh... Hello.
-  - You must be the adventurer I requested?
-  answerChoices:
-  - answerText: I am
-    dialogueObject: {fileID: 11400000, guid: 70a21c54d2f535848a37b9b78e26cb10, type: 2}
-  - answerText: I dont think that's me
-    dialogueObject: {fileID: 0}
+  - Thank you again for your service!
+  - Other people around town may have tasks for you.
+  answerChoices: []
   conditions: []

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Accept_Request_BackToBryan_FlowersForMike_Bool
   m_EditorClassIdentifier: 
   parameter: {fileID: 11400000, guid: 7283979b1dce1ee47829a25d65a4337c, type: 2}
-  condition: 1
+  condition: 0

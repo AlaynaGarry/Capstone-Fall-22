@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MeetMayorMike_Bool
   m_EditorClassIdentifier: 
   parameter: {fileID: 11400000, guid: a6aa845d58a2d1941b62341d53e0a731, type: 2}
-  condition: 0
+  condition: 1

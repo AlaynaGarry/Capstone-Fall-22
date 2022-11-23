@@ -12,7 +12,7 @@ public class DialogueUI : MonoBehaviour
 
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text textLabel;
-    [SerializeField] public GameObject button;
+    //[SerializeField] public GameObject button;
 
     [SerializeField] private GameObject interactUI;
 
