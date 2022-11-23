@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
-  m_Name: Meet Mayor Mike
+  m_Name: Decline_Request_Flowers for Mike
   m_EditorClassIdentifier: 
-  character: {fileID: 8466223457855610429, guid: 0d18400bcca7b6747bfb0a79fa0e524e, type: 3}
+  character: {fileID: 7876160493382292890, guid: 3637a42295d0f3947a7b4f780e25780e, type: 3}
   dialogue:
-  - Mayor Mike lives across town above the fountian.
-  - Be safe and I hope to see you again!
+  - I'll leave you to it then.
   answerChoices: []
-  conditions: []
+  conditions:
+  - {fileID: 11400000, guid: 80c5f42631b4d894d919c521fe0c3822, type: 2}

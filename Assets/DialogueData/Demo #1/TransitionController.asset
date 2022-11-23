@@ -13,24 +13,27 @@ MonoBehaviour:
   m_Name: TransitionController
   m_EditorClassIdentifier: 
   transitionDictionary:
-  - Name: Game Opening
-    key: {fileID: 11400000, guid: fd6819d7bafc7074ab156370d48c8b24, type: 2}
+  - Name: Request Flowers
+    key: {fileID: 11400000, guid: e40b0e842260d49498665e32dfcf87a1, type: 2}
     value:
-    - Name: Meet Charlie -> About Town
+    - Name: Request Flowers
       key:
         conditions:
-        - {fileID: 11400000, guid: 881a5d0599cfc6d43a3139613f7a0ec6, type: 2}
-      value: {fileID: 11400000, guid: e9423dbcd21e68d4495c7541f0308b66, type: 2}
-  - Name: Charlie Quests
-    key: {fileID: 11400000, guid: d56b368633e3e4d46b5384700163064f, type: 2}
+        - {fileID: 11400000, guid: b46e3c871d460f0479b59da51f328937, type: 2}
+      value: {fileID: 11400000, guid: 061f8e7415018cb4b8f274c4f16c3e29, type: 2}
+  - Name: Meet Bryan
+    key: {fileID: 11400000, guid: 6503aa94aee352e4c8555760d8da3a68, type: 2}
     value:
-    - Name: Quests -> Meet Mayor Mike
+    - Name: Meet Bryan Finish
       key:
         conditions:
-        - {fileID: 11400000, guid: ad6324c881ec45b4bb9eeed00f417d35, type: 2}
-      value: {fileID: 11400000, guid: 74f4202eda1389d4fae9de7eb549d0de, type: 2}
-    - Name: Quests -> Rat Problem
+        - {fileID: 11400000, guid: 49ed91c85b86c9e4b96c5e3ac419d3c8, type: 2}
+      value: {fileID: 11400000, guid: 56c61dc440dc6104e922655fa16b02c8, type: 2}
+  - Name: Back To Bryan
+    key: {fileID: 11400000, guid: e40b0e842260d49498665e32dfcf87a1, type: 2}
+    value:
+    - Name: 
       key:
         conditions:
-        - {fileID: 11400000, guid: 695dbb9abae5eb94aa9f15380b9c55ec, type: 2}
-      value: {fileID: 11400000, guid: 6b5b08df12b82d042b3a00e83ef60d3a, type: 2}
+        - {fileID: 11400000, guid: 3326e5ed89b5d964584c225551ae6da6, type: 2}
+      value: {fileID: 11400000, guid: 061f8e7415018cb4b8f274c4f16c3e29, type: 2}
