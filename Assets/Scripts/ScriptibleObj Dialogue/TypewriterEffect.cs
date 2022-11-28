@@ -6,6 +6,7 @@ using UnityEngine;
 public class TypewriterEffect : MonoBehaviour
 {
     [SerializeField] private float typewriterSpeed = 50f;
+    [SerializeField] private AudioSource audioSource;
 
     public bool IsRunning { get; private set; }
 
@@ -29,6 +30,7 @@ public class TypewriterEffect : MonoBehaviour
 
     private IEnumerator TypeText(string textToEffect, TMP_Text textLabel)
     {
+        
         IsRunning = true;
         textLabel.text = string.Empty;
 
@@ -38,7 +40,7 @@ public class TypewriterEffect : MonoBehaviour
         while(charIndex < textToEffect.Length)
         {
             int lastCharIndex = charIndex;
-
+            audioSource.Play();
             t += Time.deltaTime * typewriterSpeed;
 
             charIndex = Mathf.FloorToInt(t);

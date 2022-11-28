@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cead0bcbe6042234fad9969cf98078bd, type: 3}
+  m_Name: Dialogue Object Demo 2
+  m_EditorClassIdentifier: 
+  character: {fileID: 9177550796185966616, guid: 6275647cd6b137a418e903da2727685a, type: 3}
+  dialogue:
+  - This is the second Dialogue Object
+  - And a question or choice presented to the player
+  answerChoices:
+  - answerText: To DO 3
+    dialogueObject: {fileID: 11400000, guid: ac588022fb2816f46aee3ca03382c60e, type: 2}
+  - answerText: To DO 4
+    dialogueObject: {fileID: 11400000, guid: e473eaaf5b9a58a42b3bb61ad9d1422f, type: 2}
+  conditions: []

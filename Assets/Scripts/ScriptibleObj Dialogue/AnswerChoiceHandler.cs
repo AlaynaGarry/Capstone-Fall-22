@@ -10,6 +10,8 @@ public class AnswerChoiceHandler : MonoBehaviour
     [SerializeField] private RectTransform answerChoiceButtonTemplate;
     [SerializeField] private RectTransform answerChoiceContainer;
 
+    [SerializeField] private AudioSource audioSource;
+
     List<GameObject> currentActiveButtons = new List<GameObject>();
 
     private DialogueUI dialogueUI;
@@ -29,6 +31,7 @@ public class AnswerChoiceHandler : MonoBehaviour
             GameObject choiceButton = Instantiate(answerChoiceButtonTemplate.gameObject, answerChoiceContainer);
             choiceButton.gameObject.SetActive(true);
             choiceButton.GetComponentInChildren<TMP_Text>().text = answerChoice.AnswerText;
+            audioSource.Play();
             choiceButton.GetComponent<Button>().onClick.AddListener(() => OnAnswerPicked(answerChoice));
             currentActiveButtons.Add(choiceButton);
 
@@ -41,6 +44,7 @@ public class AnswerChoiceHandler : MonoBehaviour
 
     private void OnAnswerPicked(AnswerChoice answerChoice)
     {
+        
         answerChoiceBox.gameObject.SetActive(false);
 
         RemoveActiveButtons();

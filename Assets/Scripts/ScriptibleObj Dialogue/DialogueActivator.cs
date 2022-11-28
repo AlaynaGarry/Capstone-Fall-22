@@ -11,6 +11,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     [Header("Animator")]
     [SerializeField] private Animator interactionAnimator;
+    [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private GameObject dialogueUI;
     private string playerInteract;
@@ -27,7 +28,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     {
         if (isPlayerCloseEnough && dialogueUI.activeSelf)
         {
-            //Debug.Log(dialogueUI.activeSelf);
+            audioSource.Play();
             interactUI.SetActive(true);
         }   
     }
@@ -36,7 +37,6 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     {
         interactUI.SetActive(true);
         interactionAnimator.SetTrigger("Start");
-        Debug.Log(playerInteract);
         textLabel.text = playerInteract;
     }
     public void DeactivateInteractableText()
