@@ -28,7 +28,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     {
         if (isPlayerCloseEnough && dialogueUI.activeSelf)
         {
-            audioSource.Play();
+            //audioSource.Play();
             interactUI.SetActive(true);
         }   
     }

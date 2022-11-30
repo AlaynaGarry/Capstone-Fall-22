@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Complete Flowers for Mike_Bool
   m_EditorClassIdentifier: 
   parameter: {fileID: 11400000, guid: 30f10dda705ec684fb8a2df442f9333d, type: 2}
-  condition: 1
+  condition: 0
