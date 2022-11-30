@@ -20,46 +20,41 @@ MonoBehaviour:
     baseNodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
     targetNodeGuid: e540a09f-070b-4d63-b322-088625a71d10
   - NodeLinkName: 
+    baseNodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+    targetNodeGuid: 692eb5cd-fbe7-4ceb-b441-a56e628419af
+  - NodeLinkName: 
+    baseNodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+    targetNodeGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+  - NodeLinkName: 
+    baseNodeGuid: 692eb5cd-fbe7-4ceb-b441-a56e628419af
+    targetNodeGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+  - NodeLinkName: 
     baseNodeGuid: e540a09f-070b-4d63-b322-088625a71d10
     targetNodeGuid: 42ad81b9-0443-4f15-8788-316b67e85804
   dialogueNodeDatas:
   - BaseNodeName: 
-    nodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
-    position: {x: 192, y: 176}
+    nodeGuid: 692eb5cd-fbe7-4ceb-b441-a56e628419af
+    position: {x: 432, y: 403}
     dialogueNodePorts:
     - DialoguePortName: 
-      PortGuid: 4b0c414f-50be-45d3-a141-d1ae12586019
-      InputGuid: e540a09f-070b-4d63-b322-088625a71d10
-      OutputGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+      PortGuid: 49b5aafe-09d3-434e-92df-72a83f1b0d6c
+      InputGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+      OutputGuid: 692eb5cd-fbe7-4ceb-b441-a56e628419af
       TextLanguages:
       - LanguageType: 0
         LanguageGenericType: 1
-    - DialoguePortName: 
-      PortGuid: a3fc19c2-28ea-4cc1-b45b-9d5457143082
-      InputGuid: 
-      OutputGuid: 
-      TextLanguages:
-      - LanguageType: 0
-        LanguageGenericType: 2
-    - DialoguePortName: 
-      PortGuid: 16835784-e532-4eb0-b52e-ca5e845c4c75
-      InputGuid: 
-      OutputGuid: 
-      TextLanguages:
-      - LanguageType: 0
-        LanguageGenericType: 3
-    sprite: {fileID: 21300000, guid: da7129ed6a246f048a49d8d97de2d2d4, type: 3}
-    characterImageLocation: 1
-    name: Node 1
+    sprite: {fileID: 0}
+    characterImageLocation: 0
+    name: Node 3
     TextLanguages:
     - LanguageType: 0
-      LanguageGenericType: Node 1 Text
+      LanguageGenericType: Node 3 Text
   - BaseNodeName: 
     nodeGuid: e540a09f-070b-4d63-b322-088625a71d10
-    position: {x: 432, y: 161}
+    position: {x: 432, y: 84}
     dialogueNodePorts:
     - DialoguePortName: 
-      PortGuid: beeea6df-eb3b-4ef6-a434-3d65db854c0a
+      PortGuid: 3f5510f3-5a1d-49c0-a516-024955e9ebbe
       InputGuid: 42ad81b9-0443-4f15-8788-316b67e85804
       OutputGuid: e540a09f-070b-4d63-b322-088625a71d10
       TextLanguages:
@@ -71,13 +66,44 @@ MonoBehaviour:
     TextLanguages:
     - LanguageType: 0
       LanguageGenericType: Node 2 Text
+  - BaseNodeName: 
+    nodeGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+    position: {x: 181, y: 264}
+    dialogueNodePorts:
+    - DialoguePortName: 
+      PortGuid: b50b9971-909c-480e-83e5-4d4b5a5ab1cf
+      InputGuid: e540a09f-070b-4d63-b322-088625a71d10
+      OutputGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+      TextLanguages:
+      - LanguageType: 0
+        LanguageGenericType: 1
+    - DialoguePortName: 
+      PortGuid: 0ce603c2-14a2-45c4-a09d-f5b7da8a9b84
+      InputGuid: 692eb5cd-fbe7-4ceb-b441-a56e628419af
+      OutputGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+      TextLanguages:
+      - LanguageType: 0
+        LanguageGenericType: 2
+    - DialoguePortName: 
+      PortGuid: b9352ca9-2864-4735-8d35-7d8bc02b6a73
+      InputGuid: 42ad81b9-0443-4f15-8788-316b67e85804
+      OutputGuid: a874bc3b-dcc0-4bbc-b49b-b8989bc3a106
+      TextLanguages:
+      - LanguageType: 0
+        LanguageGenericType: 2
+    sprite: {fileID: 21300000, guid: da7129ed6a246f048a49d8d97de2d2d4, type: 3}
+    characterImageLocation: 1
+    name: Node 1
+    TextLanguages:
+    - LanguageType: 0
+      LanguageGenericType: Node 1 Text
   endNodeDatas:
   - BaseNodeName: 
     nodeGuid: 42ad81b9-0443-4f15-8788-316b67e85804
-    position: {x: 685, y: 128}
+    position: {x: 787, y: 244}
     endNodeType: 1
   startNodeDatas:
   - BaseNodeName: 
     nodeGuid: e45a4655-9522-4b88-a0ec-94fc650bc9c8
-    position: {x: 29, y: 147}
+    position: {x: 33, y: 264}
   eventNodeDatas: []
